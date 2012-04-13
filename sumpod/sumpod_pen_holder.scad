@@ -1,6 +1,12 @@
 /*
  * Sumpod Pen Holder
  *
+ * A pen holder for the Sumpod (http://sumpod.com/).
+ *
+ * Inspired by but not derived from:
+ *
+ *   http://www.thingiverse.com/thing:21180
+ *
  * Copyright (c) 2012 Mark Hindess
  * License:
  *   Creative Commons Attribution-ShareAlike 3.0 Unported License
