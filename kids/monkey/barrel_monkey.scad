@@ -1,2 +1,2 @@
 linear_extrude(height = 4)
-  import("Barrel_Monkey.dxf");
+  scale([0.6, 0.6, 0.6]) import("Barrel_Monkey.dxf");
