@@ -10,7 +10,7 @@
 
 module coin(height = 3, radius = 17,
             cut_radius = 14, cut_height = 1,
-            bumps = 90, bump_radius = 2) {
+            bumps = 90, bump_radius = 2, double_sided = false) {
   deg = 360/bumps;
   difference() {
     union() {
@@ -21,8 +21,14 @@ module coin(height = 3, radius = 17,
       }
       cylinder(r = radius-bump_radius, h = height);
     }
-    translate([0, 0, height-cut_height])
-      cylinder(r = cut_radius, h = height-cut_height);
+    if (cut_height > 0) {
+      translate([0, 0, height-cut_height])
+        cylinder(r = cut_radius, h = height-cut_height);
+      if (double_sided) {
+        translate([0, 0, cut_height-height])
+          cylinder(r = cut_radius, h = height);
+      }
+    }
   }
 }
 

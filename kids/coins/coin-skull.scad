@@ -9,7 +9,11 @@
  */
 
 use <coin-lib.scad>
-coin();
-translate([-11,-10,2])
+double_sided = true;
+height = 3;
+cut_height = 1;
+coin(double_sided = double_sided, height = height, cut_height = cut_height);
+translate([-11,-10,height/2])
   scale([0.26,0.26,1])
-    linear_extrude(file = "skull-and-x-bones.dxf", height = 2, center = true);
+      linear_extrude(file = "skull-and-x-bones.dxf",
+                     height = height, center = true);
