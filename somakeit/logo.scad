@@ -38,7 +38,7 @@ difference() {
         cube([size/4, 1+size/3, thickness+3], center = true);
       // octagonal end of central bar
       rotate([0,0,22.5])
-        cylinder(r = (1/cos(22.5))*size/8, h = thickness+3,
+        cylinder(r = size/(8*cos(22.5)), h = thickness+3,
                  $fn = 8, center = true);
     }
 
